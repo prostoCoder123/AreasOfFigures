@@ -1,0 +1,6 @@
+@AreasOfFigures_HostAddress = http://localhost:5264
+
+GET {{AreasOfFigures_HostAddress}}/figures/
+Accept: application/json
+
+###
