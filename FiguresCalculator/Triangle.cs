@@ -16,7 +16,7 @@ public class Triangle : FigureBase<Triangle>, IFigureOperations
     {
         var array = new[] { x, y, z };
 
-        if(array.Any(x => x <= 0 || x >= MaxSide)) 
+        if (array.Any(x => x <= 0 || x >= MaxSide))
         {
             throw new ArgumentException($"The sides values must be in range ({0}, {MaxSide})");
         }

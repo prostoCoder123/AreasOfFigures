@@ -6,7 +6,7 @@ public class FiguresTests
 {
     IReadOnlyList<Circle> _circles;
     IReadOnlyList<Triangle> _triangles;
-    IReadOnlyList<IFigureOperations> Figures {  get; set; }
+    IReadOnlyList<IFigureOperations> Figures { get; set; }
 
     [SetUp]
     public void Setup()
@@ -27,7 +27,7 @@ public class FiguresTests
         var figures = new List<IFigureOperations>() { };
         figures.AddRange(_circles);
         figures.AddRange(_triangles);
-            
+
         Figures = figures.AsReadOnly();
     }
 
