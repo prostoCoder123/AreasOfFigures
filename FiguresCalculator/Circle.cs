@@ -8,8 +8,6 @@ public class Circle : FigureBase<Circle>, IFigureOperations
     public double Radius { get; init; }
 
     public const double MaxRadius = Double.MaxValue * 0.3;
-
-    private Circle() { }
     public Circle(double radius)
     {
         if (radius <= 0 || radius >= MaxRadius)

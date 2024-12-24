@@ -34,7 +34,7 @@ public class TriangleTests
     }
 
     [Test]
-    public void CreateTriangle_WithASideEqualsZero_ThrowsException()
+    public void CreateTriangle_WithOneSideIsZero_ThrowsException()
     {
         TestDelegate CreateTriangle = () => new Triangle(default, 5, 7);
         TestDelegate CreateAnotherTriangle = () => new Triangle(1000, 53000, 0.0);
@@ -47,7 +47,7 @@ public class TriangleTests
     [TestCase(-0.009, 1.3434, 4.099)]
     [TestCase(60.3434, -1.3434, 4.099)]
     [TestCase(60.3434, 19.3434, -4.099)]
-    public void CreateTriangle_WithSideLessThanZero_ThrowsException(double x, double y, double z)
+    public void CreateTriangle_WithASideLessThanZero_ThrowsException(double x, double y, double z)
     {
         TestDelegate CreateTriangle = () => new Triangle(x, y, z);
 
@@ -56,7 +56,7 @@ public class TriangleTests
 
     [TestCase(Triangle.MaxSide, 8e35, 10e32)]
     [TestCase(14e28, 8e31, Triangle.MaxSide)]
-    public void CreateTriangle_WithSideGreaterOrEqualThanMax_ThrowsException(double x, double y, double z)
+    public void CreateTriangle_WithASideGreaterOrEqualThanMax_ThrowsException(double x, double y, double z)
     {
         TestDelegate CreateTriangle = () => new Triangle(x, y, z);
 
@@ -111,7 +111,7 @@ public class TriangleTests
 
     [TestCase(4, 5, 2)]
     [TestCase(6, 18, 14)]
-    public void IsRight_ForNotRightTriangles_ReturnsFalse(double x, double y, double z)
+    public void IsRight_ForNonRightTriangles_ReturnsFalse(double x, double y, double z)
     {
         Triangle triangle = new(x, y, z);
 

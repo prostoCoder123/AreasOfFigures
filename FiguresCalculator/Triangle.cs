@@ -12,8 +12,6 @@ public class Triangle : FigureBase<Triangle>, IFigureOperations
     private readonly double _p;
     private readonly double _area;
 
-    private Triangle() { }
-
     public Triangle(double x, double y, double z)
     {
         var array = new[] { x, y, z };

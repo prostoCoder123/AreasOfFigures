@@ -22,7 +22,7 @@ public class FiguresController : ControllerBase
         try
         {
             Circle circle = new(radius);
-            _logger.LogInformation("Calculate the circle area, radius = {0}", radius);
+            _logger.LogInformation("Calculate the area of {0}", circle.ToString());
             return Ok(circle.GetArea());
         }
         catch (Exception ex)
@@ -40,7 +40,7 @@ public class FiguresController : ControllerBase
         try
         {
             Triangle triangle = new(a, b, c);
-            _logger.LogInformation("Calculate the triangle area, sides = {0}, {1}, {2}", a, b, c);
+            _logger.LogInformation("Calculate the area of {0}", triangle.ToString());
             return Ok(triangle.GetArea());
         }
         catch (Exception ex)
